@@ -27,7 +27,6 @@ class Bookstore(object):
                     book_list.append(book)
             return book_list
 
-                    
 
 class Author(object):
     AUTHORID = 1
@@ -42,6 +41,7 @@ class Author(object):
         for self.name in Book.BOOKS:
             return Book.BOOKS[self.name]
 
+
 class Book(object):
     BOOKID = 1
     BOOKS = {}
@@ -54,22 +54,3 @@ class Book(object):
             Book.BOOKS[author.name].append(self)
         else:
             Book.BOOKS.update({author.name:[self]})
-        
-        
-#store = Bookstore("Rmotr's Bookstore")
-#borges = Author("Jorge Luis Borges", "Argentina")
-#aleph = Book("The Aleph", author=borges)
-#ficciones = Book("Ficciones", author=borges)
-#austin = Author("Jane Austin", "UK")
-#store.add_book(ficciones)
-#store.add_book(aleph)
-
-
-
-#print(store.get_authors())
-#print(store.get_books())
-#print(Book.BOOKS)
-#print(borges.get_books())
-
-#print(store.search_books(author=borges))
-#print(Book.BOOKS[borges.name])
